@@ -2,7 +2,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var countries = require('./models/countries')
-// var _ = require('lodash')
 // console.log(countries)
 
 // Create Express App Object \\
