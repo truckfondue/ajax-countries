@@ -9,16 +9,21 @@
 </head>
 <body ng-controller="ajaxCtrl">
 	<h1>{{title}}</h1>
-	<button ng-click="load()">Load Countries</button>
+	<!-- <button ng-click="load()">Load Countries</button> -->
 	<div>
 	    <div>
-	        <input ng-model='query' type="text" placeholder="search"/>
+	    	<form ng-submit="load()">
+	    		<input ng-model='query' type="text" placeholder="search"/>
+	        	<input type="submit">
+
+	    	</form>
+	        
 	        
 	    </div>
 	</div>
 	<div class="countriesView">
 		<ul>
-			<li ng-repeat="country in countries | filter:query">
+			<li ng-repeat="country in countries">
 				{{country.name}}
 			</li>
 		</ul>
